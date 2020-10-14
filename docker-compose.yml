@@ -1,0 +1,11 @@
+version: '3'
+services:
+  database:
+    image: 'mongo'
+    container_name: 'mongo-db'
+    environment:
+      - MONGO_INIT_DATABASE=jobs
+      - MONGO_INIT_ROOT=root
+      - MONGO_INIT_ROOT_PASSWORD=12345678
+    ports:
+      - '27017-27019:27017-27019'
